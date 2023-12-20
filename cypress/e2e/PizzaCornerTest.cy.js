@@ -18,4 +18,14 @@ describe('Test', () => {
         cy.visit('http://localhost:3000/pizza');
         cy.get('[data-cy=increase-button]').click();
     })
+
+    it('Form alanında name input kısmı için error mesajı çalışıyor mu?', () => {
+        cy.visit('http://localhost:3000/pizza')
+            .get('[data-cy=firstname]')
+            .click()
+            .type('Kagan')
+            .clear()
+        cy.contains('The name field cannot be left blank!')
+            .should('be.visible');
+    })
 })
