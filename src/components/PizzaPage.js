@@ -390,6 +390,7 @@ const PizzaPage = (props) => {
                                             Name
                                         </label>
                                         <input
+                                            data-cy="firstname"
                                             className="text-stone-800 rounded ml-1 pl-1 bg-amber-100 py-1 text-sm"
                                             type="text"
                                             placeholder="_"
